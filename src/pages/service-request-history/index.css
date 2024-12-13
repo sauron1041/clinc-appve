@@ -1,0 +1,80 @@
+/* Tạo viền cho Card */
+.card-booking-history {
+  border: 1px solid #e2e8f0; /* Viền nhẹ */
+  border-radius: 8px; /* Bo góc */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bóng đổ */
+}
+
+/* Phần tiêu đề */
+.card-booking-history h2 {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Cải thiện khoảng cách cho các mục */
+.booking-item {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px; /* Bo góc */
+  border: 1px solid #f1f1f1;
+  margin-bottom: 16px;
+}
+
+.booking-item .flex {
+  margin-bottom: 12px;
+}
+
+.booking-item .font-bold {
+  font-weight: bold;
+}
+
+/* Thêm viền cho các tag Trạng thái */
+.ant-tag {
+  border-radius: 4px; /* Bo góc cho tag */
+  padding: 4px 8px;
+}
+
+/* Phần dịch vụ: Viền dưới và cách đều */
+.booking-item .services {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.services span {
+  color: #0284c7;
+  font-size: 14px;
+}
+
+/* Cải thiện hiển thị trên thiết bị di động */
+@media (max-width: 768px) {
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+  }
+
+  .booking-item {
+    padding: 12px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+
+  .booking-item .flex {
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop-view {
+    display: block;
+  }
+
+  .mobile-view {
+    display: none;
+  }
+}

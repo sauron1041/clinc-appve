@@ -1,0 +1,23 @@
+{
+  "title": "Xin chào, thế giới!",
+  "service_choose": "Đặt dịch vụ",
+
+  "choose_date_time_morning": "Sáng",
+  "choose_date_time_afternoon": "Chiều",
+  "choose_date_time_evening": "Tối",
+
+  "user_login": "Đăng nhập",
+  "user_register": "Đăng ký",
+  "user_logout": "Đăng xuất",
+  "user_profile": "Hồ sơ",
+  "user_phonenumber": "Số điện thoại",
+  "user_password": "Mật khẩu",
+  "user_repassword": "Nhập lại mật khẩu",
+  "user_remember_password": "Ghi nhớ mật khẩu",
+  "user_forgot_password": "Quên mật khẩu",
+  "user_dont_have_account": "Chưa có tài khoản",
+  "user_have_account": "Đã có tài khoản",
+  "user_login_with": "Hoặc",
+  "user_login_with_google": "Tiếp tục với Google",
+  "user_booking_history": "Lịch sử đặt lịch"
+}

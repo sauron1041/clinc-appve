@@ -1,0 +1,26 @@
+Tùy chỉnh toàn bộ scrollbar
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px; /* Cho scrollbar ngang */
+}
+
+/* Tùy chỉnh phần track (nền của scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Tùy chỉnh phần thumb (thanh cuộn thực tế) */
+::-webkit-scrollbar-thumb {
+  background: #1cb93e;
+  border-radius: 6px;
+}
+
+/* Khi hover vào thanh cuộn */
+::-webkit-scrollbar-thumb:hover {
+  background: #0a5d1b;
+}
+
+body {
+  /* background: linear-gradient(135deg, #ffffff, #f8e6e6, #e7e0e0, #ececec); */
+  color: #333;
+}

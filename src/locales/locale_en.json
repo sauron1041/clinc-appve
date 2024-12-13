@@ -1,0 +1,22 @@
+{
+  "title": "Hello, World!",
+  "service_choose": "Book a service",
+
+  "choose_date_time_morning": "Morning",
+  "choose_date_time_afternoon": "Afternoon",
+  "choose_date_time_evening": "Evening",
+
+  "user_login": "Login",
+  "user_register": "Register",
+  "user_logout": "Logout",
+  "user_profile": "Profile",
+  "user_phonenumber": "Phone number",
+  "user_password": "Password",
+  "user_repassword": "Re-enter password",
+  "user_remember_password": "Remember password",
+  "user_forgot_password": "Forgot password",
+  "user_dont_have_account": "Don't have an account",
+  "user_have_account": "Already have an account",
+  "user_login_with": "Or",
+  "user_login_with_google": "Continue with Google"
+}

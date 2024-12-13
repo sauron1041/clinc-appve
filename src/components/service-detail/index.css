@@ -1,0 +1,37 @@
+.service-detail-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-detail {
+  margin-bottom: 20px;
+}
+
+.service-detail h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-detail p {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  font-size: 16px;
+}
+
+.cart-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cart-info h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
