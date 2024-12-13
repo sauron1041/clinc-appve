@@ -1,5 +1,4 @@
-import React from 'react';
-import { Table, Card, message } from 'antd';
+import {  message } from 'antd';
 import Cookies from 'js-cookie';
 const LogoutPage = () => {
     localStorage.removeItem('userInfo');

@@ -4,14 +4,12 @@ import StatusForm from "./form/statusForm";
 import { findAllServiceRequestBegingServed } from "../../../api/service-request";
 import { Loading } from "../../../components/loading";
 import { Button, Modal } from "antd";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, } from "react-router-dom";
 
 
 const ServiceRequestPage: React.FC = () => {
     const [data, setData] = useState([]);
     const [selectedRequest, setSelectedRequest] = useState<any>(null);
-    const [employeeId, setEmployeeId] = useState<number>(1);
-    const [branchId, setBranchId] = useState<number>(1);
     const [isLoading, setIsLoading] = useState(true);
 
     const [isModalView, setIsModelView] = useState(false);
@@ -50,8 +48,6 @@ const ServiceRequestPage: React.FC = () => {
 
     const handleEdit = (request: any) => {
         console.log("Edit Request:", request);
-        setEmployeeId(request.employeeId);
-        setBranchId(request.branchId);
         setSelectedRequest(request);
     };
 

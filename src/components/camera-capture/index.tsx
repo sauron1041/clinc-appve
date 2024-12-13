@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Button, message, Modal } from 'antd';
 import { CameraOutlined } from '@ant-design/icons';
 

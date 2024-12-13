@@ -13,18 +13,18 @@ import { useDispatch } from 'react-redux';
 import { setBodyService } from '../redux/slices/bodyServiceSlice';
 import { setFaceService } from '../redux/slices/faceServiceSlice';
 import { setOtherService } from '../redux/slices/otherServiceSlice';
-import Splash from '../components/splash';
+// import Splash from '../components/splash';
 import Cookies from 'js-cookie';
 import { getInfo } from '../api/auth';
 import { setUserInfo } from '../redux/slices/userInfoSlice';
 import { setAllService } from '../redux/slices/allServicesSlice';
 import { setToastNotify } from '../redux/slices/toastNotifySlice';
-import MainLayout from '../layouts/mainLayout';
+// import MainLayout from '../layouts/mainLayout';
 import BookingHistory from './booking-history';
 import SessionHistory from './session-history';
 import TechnicanDasboard from './technican-dashboard';
 import TechnicanLayout from '../layouts/technicanLayout';
-import TechnicanAppointment from './technican-appointment';
+// import TechnicanAppointment from './technican-appointment';
 import BookingPage from './booking-customer';
 import CustomerLayout from '../layouts/customerLayout';
 import CustomerProfilePage from './customer-profile';
@@ -34,13 +34,12 @@ import QRCodePage from './qr-code-page';
 import { IService } from '../models/service';
 import Layout from './Layout';
 import socket from '../socket';
-import { useToast } from '../context/ToastProvider';
 import ServiceRequestPage from './technicans/service-request';
 import EmployeeProfilePage from './employee-profile';
 import RoleBasedLayout from '../layouts/handleLayout';
 import { RoleName } from '../constants/role';
 import LogoutPage from './logout';
-import { Button } from 'antd';
+// import { Button } from 'antd';
 import NotificationPage from './notification-page';
 // import { useToast } from '../context/ToastProvider';
 
@@ -48,23 +47,25 @@ const App = () => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(true);
   const accessToken = Cookies.get('accessToken');
-  const toast = useToast();
+
   interface User {
     roleId: number;
     [key: string]: any;
   }
 
+  console.log("isloading", isLoading);
+  
   const [user, setUser] = useState<User | null>(null);
 
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  // const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const handleShowModal = () => {
-    setIsModalVisible(true);
-  };
+  // const handleShowModal = () => {
+  //   setIsModalVisible(true);
+  // };
 
-  const handleCloseModal = () => {
-    setIsModalVisible(false);
-  };
+  // const handleCloseModal = () => {
+  //   setIsModalVisible(false);
+  // };
 
   useEffect(() => {
     if (accessToken) {

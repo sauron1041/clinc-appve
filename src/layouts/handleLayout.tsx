@@ -1,16 +1,14 @@
 import React, { useEffect } from "react";
-import { Navigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 import CustomerLayout from "./customerLayout";
 import TechnicanLayout from "./technicanLayout";
-import MainLayout from "./mainLayout";
+
 
 interface Props {
     roleId: number;
-    children: React.ReactNode;
+    children: React.ReactNode | React.ReactNode[] | undefined
 }
 
-const RoleBasedLayout: React.FC<Props> = ({children }) => {
+const RoleBasedLayout: React.FC<Props | any> = ({children }) => {
     // const userInfo = useSelector((state: any) => state.user.userInfo);
 
     // if (!userInfo) {

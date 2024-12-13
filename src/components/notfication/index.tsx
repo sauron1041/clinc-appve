@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import { Modal, Badge, Button, Card, Tag } from "antd";
-import { BellOutlined } from "@ant-design/icons";
+import React from "react";
+import {  Card, Tag } from "antd";
 
 const NotificationList: React.FC<{ notifications: any[] | undefined }> = ({
   notifications,
 }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
   const notificationColors: { [key: number]: string } = {
     1: "red",
@@ -20,8 +19,8 @@ const NotificationList: React.FC<{ notifications: any[] | undefined }> = ({
     10: "gray",
   };
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  // const openModal = () => setIsModalOpen(true);
+  // const closeModal = () => setIsModalOpen(false);
 
   return (
     <div>

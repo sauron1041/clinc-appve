@@ -1,5 +1,4 @@
-import axios, { CustomAxiosResponse } from '../axiosConfig';
-import { IAppointmentRequest } from './interface';
+import { CustomAxiosResponse } from '../axiosConfig'
 import AxiosService from '../axios';
 
 const apiVersion = '/api/v1';

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Layout, Menu, Avatar, Button, Input, Badge } from 'antd';
-import { UserOutlined, AppstoreOutlined, SearchOutlined, ShoppingCartOutlined, BellOutlined } from '@ant-design/icons';
+import { Layout, Avatar, Button, Badge } from 'antd';
+import { UserOutlined, AppstoreOutlined, ShoppingCartOutlined, BellOutlined } from '@ant-design/icons';
 import './index.css';
-import NotificationModal from '../notfication-modal';
+// import NotificationModal from '../notfication-modal';
 import { notificationGetAll } from '../../api/notification';
 import { Loading } from '../loading';
 import { useNavigate } from 'react-router-dom';
@@ -10,26 +10,26 @@ import { useNavigate } from 'react-router-dom';
 const { Header } = Layout;
 
 const CustomerHeader: React.FC = () => {
-  const [collapsed, setCollapsed] = useState(false);
-  const [cartCount, setCartCount] = useState(3);
+  // const [collapsed, setCollapsed] = useState(false);
+  // const [cartCount, setCartCount] = useState(3);
   const [notificationCount, setNotificationCount] = useState(2);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [noti, setNoti] = useState<any>([]);
   const navigate = useNavigate();
 
-  const toggleMenu = () => {
-    if (collapsed !== undefined) {
-      setCollapsed(!collapsed);
-    }
-  };
+  // const toggleMenu = () => {
+  //   if (collapsed !== undefined) {
+  //     setCollapsed(!collapsed);
+  //   }
+  // };
 
-  const menuItems = [
-    {
-      key: '1',
-      icon: <SearchOutlined />,
-      label: <Input placeholder="Tìm kiếm" className="rounded-lg" />,
-    },
-  ];
+  // const menuItems = [
+  //   {
+  //     key: '1',
+  //     icon: <SearchOutlined />,
+  //     label: <Input placeholder="Tìm kiếm" className="rounded-lg" />,
+  //   },
+  // ];
 
   useEffect(() => {
     // Fetch cart count
@@ -41,6 +41,10 @@ const CustomerHeader: React.FC = () => {
         if (res?.statusCode == 200) {
           setNotificationCount(res?.data.length);
           setNoti(res?.data);
+          console.log(noti);
+          // console.log("s");
+          
+
         }
       });
       setIsLoading(false);
@@ -70,7 +74,8 @@ const CustomerHeader: React.FC = () => {
             </Badge>
 
             {/* <NotificationModal notifications={noti} /> */}
-            <Badge count={cartCount} className="mr-2">
+            <Badge count={3} className="mr-2">
+            {/* <Badge count={cartCount} className="mr-2"> */}
               <Button icon={<ShoppingCartOutlined />} type="text" className="text-white" />
             </Badge>
 
@@ -79,9 +84,9 @@ const CustomerHeader: React.FC = () => {
           </div>
         </div>
 
-        <div className={`lg:hidden mt-4 ${collapsed ? 'block' : 'hidden'}`}>
+        {/* <div className={`lg:hidden mt-4 ${collapsed ? 'block' : 'hidden'}`}>
           <Menu mode="inline" className="text-white" items={menuItems} />
-        </div>
+        </div> */}
       </Header>
     </Layout>
   );

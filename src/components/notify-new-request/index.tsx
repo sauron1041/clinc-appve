@@ -183,9 +183,9 @@
 
 
 import React, { useState, useEffect } from "react";
-import { Button, Card, Modal, message } from "antd";
+import { Button, Card, Modal } from "antd";
 import socket from "../../socket"; // Giả sử bạn đã cấu hình socket
-import { BellOutlined, CheckCircleOutlined } from "@ant-design/icons";
+import { BellOutlined } from "@ant-design/icons";
 
 const CountdownModal: React.FC = () => {
     const [timeLeft, setTimeLeft] = useState(5); // Thời gian đếm ngược ban đầu là 5 giây

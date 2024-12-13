@@ -105,7 +105,7 @@
 
 
 import React, { useEffect, useState } from "react";
-import { DatePicker, Select, Button, Form, Input, Modal } from "antd";
+import { DatePicker, Select, Button, Form, Input } from "antd";
 import viVN from 'antd/es/date-picker/locale/vi_VN';
 import dayjs from "dayjs";
 import "dayjs/locale/vi";
@@ -142,9 +142,7 @@ const BookingPage: React.FC = () => {
   const [note, setNote] = useState<string>('');
   const [isDisabled, setIsDisabled] = useState<boolean>(true);
   const [isLogin, setIsLogin] = useState<boolean>(false);
-  const [isShowModalChooseTime, setIsShowModalChooseTime] = useState<boolean>(false);
   const [isLoadingAppointment, setIsLoadingAppointment] = useState<boolean>(false);
-  const [isLoginCheck, setIsLoginCheck] = useState<boolean>(false);
   const toast = useToast()
 
 
@@ -383,7 +381,7 @@ const BookingPage: React.FC = () => {
               locale={viVN}
               className="w-full"
               disabledDate={(current) => current && current < dayjs().startOf('day')}
-              onChange={(date, dateString) => {
+              onChange={(date) => {
                 if (date) {
                   setSelectedTime(date.toDate());
                 }

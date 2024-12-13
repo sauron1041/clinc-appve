@@ -1,5 +1,5 @@
 import axios, { CustomAxiosResponse } from '../axiosConfig';
-import AxiosService from '../axios';
+// import AxiosService from '../axios';
 
 export const addFeeback = async (data: any): Promise<CustomAxiosResponse<any> | undefined> => {
   try {

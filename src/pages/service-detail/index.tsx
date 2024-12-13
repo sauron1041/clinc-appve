@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ServiceDetail from '../../components/service-detail';
-import { toast } from 'react-toastify';
 
 const ServiceDetailPage: React.FC = () => {
-    const [cart, setCart] = useState<number[]>([]);
 
     const service = {
         id: 21,
@@ -27,8 +25,7 @@ const ServiceDetailPage: React.FC = () => {
         },
     };
 
-    const handleAddToCart = (serviceId: number) => {
-        setCart((prevCart) => [...prevCart, serviceId]);
+    const handleAddToCart = () => {
         alert('Dịch vụ đã được thêm vào giỏ hàng');
         // toast.success('Dịch vụ đã được thêm vào giỏ hàng');
     };

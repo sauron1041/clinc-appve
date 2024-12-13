@@ -1,21 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 // import {useTranslation} from 'react-i18next';
-import {LoadingOverlay} from '../../components/index';
-import {useDispatch, useSelector} from 'react-redux';
+import { LoadingOverlay } from '../../components/index';
+import { useDispatch, useSelector } from 'react-redux';
 import Header from '../../components/header';
 import MenuBar from '../../components/menu-bar';
 import ModalLogin from '../../components/modal-login';
 import Footer from '../../components/footer';
 import ChooseDateTime from '../../components/choose-date-time';
 import TextArea from '../../components/text-aria';
-import {addHours, format, isEqual} from 'date-fns';
-import {IAppointmentRequest} from '../../api/appointment/interface';
-import {addAppointment} from '../../api/appointment';
-import {ELocation} from '../../components/modal-login/enumLocation';
-import {setToastNotify} from '../../redux/slices/toastNotifySlice';
-import {ToastContainer} from 'react-toastify';
+import { addHours, format, isEqual } from 'date-fns';
+import { IAppointmentRequest } from '../../api/appointment/interface';
+import { addAppointment } from '../../api/appointment';
+import { ELocation } from '../../components/modal-login/enumLocation';
+import { setToastNotify } from '../../redux/slices/toastNotifySlice';
+import { ToastContainer } from 'react-toastify';
 import ToastNotification from '../../components/toast-notify';
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import LoadingSpinner from '../../components/loading-spinner';
 // const BACKEND_URL = process.env.BACKEND_URL;
 
@@ -65,7 +65,7 @@ const Booking: React.FunctionComponent = () => {
   const handleChooseService = async () => {
     const dateWithTimezone = addHours(selectedTime ? selectedTime : new Date(), 0);
     const timeConvertUTC = format(dateWithTimezone, "yyyy-MM-dd'T'HH:mm:ss");
-    const data: IAppointmentRequest = {
+    const data: IAppointmentRequest | any = {
       time: timeConvertUTC,
       customer_id: 1,
       service_id: Number(selectedServiceId),
@@ -80,10 +80,10 @@ const Booking: React.FunctionComponent = () => {
       setSelectedServiceId('');
       setSelectedTime(new Date('2000-01-01 00:00'));
       setNote('');
-      dispatch(setToastNotify({message: 'Đặt lịch thành công!', type: 'success', duration: 2000}));
+      dispatch(setToastNotify({ message: 'Đặt lịch thành công!', type: 'success', duration: 2000 }));
       setIsLoadingAppointment(false);
     } else {
-      dispatch(setToastNotify({message: 'Đặt lịch thất bại!', type: 'error', duration: 2000}));
+      dispatch(setToastNotify({ message: 'Đặt lịch thất bại!', type: 'error', duration: 2000 }));
     }
   };
 
@@ -153,8 +153,8 @@ const Booking: React.FunctionComponent = () => {
                   <label className="flex-1 flex pb-2 font-semibold text-white">Chọn chi nhánh</label>
                   <select
                     className="flex    h-9 rounded-xl pl-2 w-[90%]"
-                    // value={selectedServiceId}
-                    // onChange={handleChange}
+                  // value={selectedServiceId}
+                  // onChange={handleChange}
                   >
                     <option value="">--Chọn một chi nhánh--</option>
                     <option value="">Chi nhánh 1</option>
@@ -177,9 +177,8 @@ const Booking: React.FunctionComponent = () => {
               <div className="mt-14 flex justify-center">
                 <button
                   disabled={isDisabled}
-                  className={`${
-                    isDisabled ? 'bg-[#FFD700] opacity-50' : 'bg-[#FFD700]'
-                  } px-10 py-2 rounded-lg text-black text-lg font-normal`}
+                  className={`${isDisabled ? 'bg-[#FFD700] opacity-50' : 'bg-[#FFD700]'
+                    } px-10 py-2 rounded-lg text-black text-lg font-normal`}
                   onClick={() => handleChooseService()}
                 >
                   {isLoadingAppointment ? <LoadingSpinner size={30} /> : 'Đặt lịch'}

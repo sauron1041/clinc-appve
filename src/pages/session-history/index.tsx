@@ -1,6 +1,4 @@
-import React from 'react';
-import { Table, Card } from 'antd';
-import { CheckCircleOutlined, CloseCircleOutlined, ClockCircleOutlined } from '@ant-design/icons';
+import { Card } from 'antd';
 import CameraCapture from '../../components/camera-capture';
 
 const SessionHistory = () => {

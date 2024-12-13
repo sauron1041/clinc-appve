@@ -1,7 +1,5 @@
-import React from 'react';
-import { Table, Card } from 'antd';
-import { CheckCircleOutlined, CloseCircleOutlined, ClockCircleOutlined } from '@ant-design/icons';
-import CameraCapture from '../../components/camera-capture';
+
+import { Card } from 'antd';
 import TechnicanAppointmentComponent from '../../components/technican-appointment';
 
 const TechnicanAppointment = () => {

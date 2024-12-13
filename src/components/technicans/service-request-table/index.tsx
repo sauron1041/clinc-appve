@@ -19,7 +19,7 @@ interface Props {
     onChoose: (choose: ServiceRequest) => void;
 }
 
-const ServiceRequestTable: React.FC<Props> = ({ data, onEdit, onView, onChoose }) => {
+const ServiceRequestTable: React.FC<Props> = ({ data, onView, onChoose }) => {
     const columns = [
         {
             title: "Mã yêu cầu",

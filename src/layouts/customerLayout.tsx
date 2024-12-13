@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import Header from "../components/header";
+import React from "react";
+// import Header from "../components/header";
 import { ToastContainer } from "react-toastify";
-import Footer from "../components/footer";
+// import Footer from "../components/footer";
 import MenuBar from "../components/menu-bar";
-import TechnicianHeader from "../components/header-technican";
-import TechnicianFooter from "../components/technican-footer";
+// import TechnicianHeader from "../components/header-technican";
+// import TechnicianFooter from "../components/technican-footer";
 import FooterCustom from "../components/footer-custom";
 import HeaderCustom from "../components/header-custom";
 

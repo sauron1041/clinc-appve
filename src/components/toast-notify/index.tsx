@@ -1,6 +1,6 @@
 import {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import {toast} from 'react-toastify';
+// import {toast} from 'react-toastify';
 
 const ToastNotification = () => {
   const toastNotify = useSelector((state: any) => state.toastNotify);

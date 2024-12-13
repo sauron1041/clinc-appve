@@ -1,36 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { Card, Tag, Space, Table } from 'antd';
 import { CheckCircleOutlined, CloseCircleOutlined, ClockCircleOutlined } from '@ant-design/icons';
 import './index.css'
-import { appointmentGetHistory, appointmentGetHistoryWithFeedback } from '../../api/appointment';
+import { appointmentGetHistoryWithFeedback } from '../../api/appointment';
 import { Loading } from '../../components/loading';
 import ReviewModal from '../review-modal';
 import { addFeeback } from '../../api/feedback';
 import { toast } from 'react-toastify';
 
-const data = [
-  {
-    key: '1',
-    date: '2024-11-20 10:00',
-    status: 1,
-    services: ['Dịch vụ A, Dịch vụ A, Dịch vụ A', 'Dịch vụ B',],
-    branch: 'Chi nhánh 1',
-  },
-  {
-    key: '2',
-    date: '2024-11-21 14:30',
-    status: 2,
-    services: ['Dịch vụ C'],
-    branch: 'Chi nhánh 2',
-  },
-  {
-    key: '3',
-    date: '2024-11-22 09:00',
-    status: 0,
-    services: ['Dịch vụ A', 'Dịch vụ C'],
-    branch: 'Chi nhánh 1',
-  },
-];
 
 
 
@@ -154,7 +131,7 @@ const BookingHistory = () => {
     {
       title: 'Đánh giá',
       key: 'feedback',
-      render: (text: any, record: any) => (
+      render: (record: any) => (
         record.serviceRequest?.feedback ? (
           <button
             onClick={() => handleViewFeedback(record)}

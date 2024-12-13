@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Card, Col, Row, Button } from "antd";
 import { DollarCircleOutlined, AppstoreAddOutlined } from "@ant-design/icons";
 
@@ -19,12 +19,12 @@ const services: Service[] = [
 ];
 
 const ServiceList: React.FC = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const handleServiveDetail = (serviceId: number) => {
-        navigate(`/service-detail`);
-        // navigate(`/service-detail/${serviceId}`);
-    };
+    // const handleServiveDetail = () => {
+    //     navigate(`/service-detail`);
+    //     // navigate(`/service-detail/${serviceId}`);
+    // };
     return (
         <div className="mx-auto py-4 container">
             <h1 className="mb-6 font-bold text-2xl text-center">Danh sách dịch vụ</h1>
@@ -56,7 +56,7 @@ const ServiceList: React.FC = () => {
 
                             {/* <Button type="primary" block className="mt-4">Xem chi tiết</Button> */}
                             <Button
-                                onClick={() => handleServiveDetail(service.id)}
+                                // onClick={() => handleServiveDetail(service.id)}
                                 type="primary"
                                 htmlType="submit"
                                 className="bg-[#31a4dd] hover:bg-[#bddae9] w-full text-white"

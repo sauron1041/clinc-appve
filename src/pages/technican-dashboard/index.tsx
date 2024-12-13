@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Card, Button, Modal, List, message, Row, Col } from 'antd';
-import { CameraOutlined, CalendarOutlined, ScheduleOutlined, CheckSquareOutlined, PullRequestOutlined, HistoryOutlined, WechatWorkFilled, SwitcherOutlined } from '@ant-design/icons';
+import React from 'react';
+import { Card, Row, Col } from 'antd';
+import { CameraOutlined, CalendarOutlined, CheckSquareOutlined, HistoryOutlined, SwitcherOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 const TechnicianDashboard: React.FC = () => {

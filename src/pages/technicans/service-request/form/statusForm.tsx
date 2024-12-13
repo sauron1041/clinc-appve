@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Modal, Form, Select, Input, Button, message } from "antd";
+import { Modal, Form, Input, Button, message } from "antd";
 import CameraCapture from "../../../../components/camera";
 import { updateServiceRequest } from "../../../../api/service-request";
 import { Loading } from "../../../../components/loading";

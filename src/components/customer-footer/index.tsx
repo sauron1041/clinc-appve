@@ -1,28 +1,28 @@
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Layout, Menu } from 'antd';
-import { CameraOutlined, CalendarOutlined, HomeOutlined, InfoOutlined, UserOutlined, UngroupOutlined, AppstoreOutlined } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import { Layout, Menu } from 'antd';
+import { CalendarOutlined, HomeOutlined, UserOutlined,  AppstoreOutlined } from '@ant-design/icons';
+// import { Link } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
 
-const Home = () => (
-    <div className="flex justify-center items-center bg-white h-full">
-        <h2 className="text-2xl">Xem Tựa Làm</h2>
-    </div>
-);
+// const Home = () => (
+//     <div className="flex justify-center items-center bg-white h-full">
+//         <h2 className="text-2xl">Xem Tựa Làm</h2>
+//     </div>
+// );
 
-const Camera = () => (
-    <div className="flex justify-center items-center bg-white h-full">
-        <h2 className="text-2xl">Chụp Ảnh Khách Hàng</h2>
-    </div>
-);
+// const Camera = () => (
+//     <div className="flex justify-center items-center bg-white h-full">
+//         <h2 className="text-2xl">Chụp Ảnh Khách Hàng</h2>
+//     </div>
+// );
 
-const XemLichLamViec = () => (
-    <div className="flex justify-center items-center bg-white h-full">
-        <h2 className="text-2xl">Xem Lịch Làm Việc</h2>
-    </div>
-);
+// const XemLichLamViec = () => (
+//     <div className="flex justify-center items-center bg-white h-full">
+//         <h2 className="text-2xl">Xem Lịch Làm Việc</h2>
+//     </div>
+// );
 
 import { useNavigate } from 'react-router-dom';
 

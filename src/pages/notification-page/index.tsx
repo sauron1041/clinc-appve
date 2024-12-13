@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Modal, Badge, Button, Card, Tag } from "antd";
-import { BellOutlined } from "@ant-design/icons";
+import {  Card, Tag } from "antd";
 import { notificationGetAll } from "../../api/notification";
 
 const NotificationPage: React.FC<{}> = ({

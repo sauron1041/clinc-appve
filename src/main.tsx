@@ -10,8 +10,8 @@ import { appConfig } from './appConfig.ts';
 import { Provider } from 'react-redux';
 import store from './redux/store.ts';
 import { ConfigProvider } from 'antd';
-import { ToastContainer } from 'react-toastify';
-import ToastNotification from './components/toast-notify/index.tsx';
+// import { ToastContainer } from 'react-toastify';
+// import ToastNotification from './components/toast-notify/index.tsx';
 
 import GlobalToastContainer from './components/global-toast/index.tsx';
 import { ToastProvider } from './context/ToastProvider';
